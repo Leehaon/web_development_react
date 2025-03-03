@@ -6,7 +6,7 @@
 // console.log(greeting);
 
 // // greeting2를 템플릿 리터럴을 적용하여 작성하고 console창에 띄우시오.
-
+// // 백틱 사용하셔야 합니다
 // let greeting2 = `Hello ${person.firstName} ${person.lastName}`;
 // console.log(greeting2);
 
@@ -17,7 +17,7 @@
 // const person2 = {
 //   firstName: 'Jane',
 //   lastName: 'Cooper',
-//   email: 'j.cooper@mail.com',
+//   email: 'j.cooper@mail.com'
 // };
 
 // const firstName1 = person.firstName;
