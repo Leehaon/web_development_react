@@ -5,13 +5,13 @@ export default function MyForm() {
 
   const handleSubmit = (event) => {
     alert(`${text} 라고 입력하셨습니다.`);
-    event.preventDefualt();
+    event.preventDefault();
   }
 
-  return (
+  return(
     <form onSubmit={handleSubmit}>
       <input type="text" onChange={event => setText(event.target.value)} value={text} />
-      <input type="submit" value="제출하세요." />
+      <input type="submit" value="제출하세요" />
     </form>
-  );
+  )
 }
