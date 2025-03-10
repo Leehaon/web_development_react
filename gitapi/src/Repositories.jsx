@@ -9,23 +9,23 @@ function Repositories() {
   }
 
   const { isLoading, isError, data } = useQuery({
-    queryKey: ['repositories'], 
+    queryKey: ['repositories'],
     queryFn: getRepositories,
-    staleTime: 60 * 1000, // 밀리초 단위이기 때문에 1분을 의미함
+    staleTime: 60 * 1000, // 밀리초 단위이기 때문에 1분을 의미함.
   });
 
-  // 조건부 렌더링 부분 구현 : 데이터를 이용할 수 있을 때 렌더링 
+  //조건부 렌더링 부분 구현 : 데이터를 이용할 수 있을 때 렌더링
   // REST API 호출이 오류로 끝나는 경우 메시지 렌더링
 
   if (isLoading) {
-    return <p>로딩 중... ⏳</p>
+    return <p>로딩 중 ... ⏳</p>
   }
 
   if (isError) {
     return <p>오류 발생했습니다 😅</p>
   }
   else {
-    return (
+    return(
       <table>
         <tbody>
           {
