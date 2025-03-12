@@ -4,7 +4,7 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 
 import './App.css'
-import PageNotFound from './components/pageNotFound';
+import PageNotFound from './components/PageNotFound';
 import ContactSeoul from './components/ContactSeoul';
 import ContactLondon from './components/ContactLondon';
 
