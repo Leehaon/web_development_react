@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Main from './components/Main';
+import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const data = [
+    {
+      title: "Psycho",
+      artist: "Red Velvet",
+      releaseDate: "2019.12.23",
+      gender: "femail",
+    },
+    {
+      title: "Feel My Rhythm",
+      artist: "Red Velvet",
+      releaseDate: "2022.03.21",
+      gender: "femail",
+    },
+    {
+      title: "Beatbox",
+      artist: "NCT DREAM",
+      releaseDate: "2022.05.30",
+      gender: "mail",
+    },
+    {
+      title: "Attention",
+      artist: "NewJeans",
+      releaseDate: "2022.08.01",
+      gender: "femail",
+    },
+    {
+      title: "Rush Hour",
+      artist: "Crush(feat. j-hope of BTS)",
+      releaseDate: "2022.09.22",
+      gender: "mail",
+    },
+  ];
+
+  const [playlist, setPlaylist] = useState(data);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>K-POP 플레이 리스트</h1>
+      <Main data={data} playlist={playlist} setPlaylist={setPlaylist}></Main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
